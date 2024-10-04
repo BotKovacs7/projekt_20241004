@@ -89,8 +89,8 @@ def open_hossz_ablak():
     
     global entry_length, combo_length, label_result_length
     
-    label_hossz = tk.Label(hosszablak, text="írd be az értéket:")
-    label_hossz.pack(pady=5)
+    hosszcimke = tk.Label(hosszablak, text="írd be az értéket:")
+    hosszcimke.pack(pady=5)
     
     entry_hossz = tk.Entry(hosszablak)
     entry_hossz.pack(pady=5)
@@ -115,8 +115,8 @@ def open_suly_ablak():
     
     global entry_weight, combo_weight, label_result_weight
     
-    label_suly = tk.Label(open_suly_ablak, text="írd be az értéket:")
-    label_suly.pack(pady=5)
+    sulycimke = tk.Label(open_suly_ablak, text="írd be az értéket:")
+    sulycimke.pack(pady=5)
     
     entry_suly = tk.Entry(open_suly_ablak)
     entry_suly.pack(pady=5)
@@ -141,8 +141,8 @@ def open_ido_ablak():
     
     global entry_time, combo_time, label_result_time
     
-    label_ido = tk.Label(idoablak, text="írd be az értéket:")
-    label_ido.pack(pady=5)
+    idocimke = tk.Label(idoablak, text="írd be az értéket:")
+    idocimke.pack(pady=5)
     
     entry_ido = tk.Entry(idoablak)
     entry_ido.pack(pady=5)
@@ -159,5 +159,9 @@ def open_ido_ablak():
 
     gombzar = tk.Button(idoablak, text="ablak bezárása", command=idoablak.destroy)
     gombzar.pack(pady=20)
+
+open_hossz_ablak()
+open_suly_ablak()
+open_ido_ablak()
 
 root.mainloop()
