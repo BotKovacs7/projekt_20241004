@@ -3,72 +3,72 @@ from tkinter import ttk
 
 # Hossz átváltás
 def convert_length():
-    value = float(entry_length.get())
-    unit = combo_length.get()
+    ertek = float(entry_length.get())
+    egyseg = combo_length.get()
     
     if egyseg == "kilométer":
-        miles = value * 0.621371
-        meters = value * 1000
-        millimeters = value * 1000000
-    elif unit == "mérföld":
-        kilometers = value * 1.60934
-        meters = value * 1609.34
-        millimeters = value * 1609340
-    elif unit == "méters":
-        kilometers = value / 1000
-        miles = value / 1609.34
-        millimeters = value * 1000
-    elif unit == "milliméter":
-        kilometers = value / 1000000
-        miles = value / 1609340
-        meters = value / 1000
+        miles = ertek * 0.621371
+        meters = ertek * 1000
+        millimeters = ertek * 1000000
+    elif egyseg == "mérföld":
+        kilometers = ertek * 1.60934
+        meters =  * 1609.34
+        millimeters = ertek * 1609340
+    elif egyseg == "méters":
+        kilometers = ertek / 1000
+        miles =  / 1609.34
+        millimeters = ertek * 1000
+    elif egyseg == "milliméter":
+        kilometers = ertek / 1000000
+        miles = ertek / 1609340
+        meters = ertek / 1000
     
     label_result_length.config(text=f"kilométer: {kilometers:.4f}, mérföld: {miles:.4f}, méter: {meters:.4f}, milliméter: {millimeters:.4f}")
 
 # Tömeg átváltás
 def convert_weight():
-    value = float(entry_weight.get())
-    unit = combo_weight.get()
+    ertek = float(entry_weight.get())
+    egyseg = combo_weight.get()
     
-    if unit == "kilogramm":
-        pounds = value * 2.20462
-        grams = value * 1000
-        ounces = value * 35.274
-    elif unit == "font":
-        kilograms = value / 2.20462
-        grams = kilograms * 1000
-        ounces = value * 16
-    elif unit == "gramm":
-        kilograms = value / 1000
-        pounds = kilograms * 2.20462
-        ounces = kilograms * 35.274
-    elif unit == "uncia":
-        kilograms = value / 35.274
-        pounds = value / 16
-        grams = kilograms * 1000
+    if egyseg == "kilogramm":
+        font = ertek * 2.20462
+        gram = ertek * 1000
+        uncia = ertek * 35.274
+    elif egyseg == "font":
+        kg = ertek / 2.20462
+        gram = kg * 1000
+        uncia = ertek * 16
+    elif egyseg == "gramm":
+        kg = ertek / 1000
+        font = kg * 2.20462
+        uncia = kg * 35.274
+    elif egyseg == "uncia":
+        kg = ertek / 35.274
+        font = ertek / 16
+        gram = kg * 1000
     
-    label_result_weight.config(text=f"kilogramm: {kilograms:.4f}, font: {pounds:.4f}, gramm: {grams:.4f}, uncia: {ounces:.4f}")
+    label_result_weight.config(text=f"kilogramm: {kg:.4f}, font: {font:.4f}, gramm: {gram:.4f}, uncia: {uncia:.4f}")
 
 # Idő átváltás
 def convert_time():
-    value = float(entry_time.get())
-    unit = combo_time.get()
+    ertek = float(entry_time.get())
+    egyseg = combo_time.get()
     
-    if unit == "óra":
-        minutes = value * 60
-        seconds = value * 3600
-    elif unit == "perc":
-        hours = value / 60
-        seconds = value * 60
-    elif unit == "másodperc":
-        hours = value / 3600
-        minutes = value / 60
-    elif unit == "nap":
-        hours = value * 24
-        minutes = value * 1440
-        seconds = value * 86400
+    if egyseg == "óra":
+        percek = ertek * 60
+        masodpercek = ertek * 3600
+    elif egyseg == "perc":
+        hours = ertek / 60
+        masodpercek = ertek * 60
+    elif egyseg == "másodperc":
+        hours = ertek / 3600
+        percek = ertek / 60
+    elif egyseg == "nap":
+        orak = ertek * 24
+        percek = ertek * 1440
+        masodpercek = ertek * 86400
     
-    label_result_time.config(text=f"óra: {hours:.4f}, perc: {minutes:.4f}, másodperc: {seconds:.4f}")
+    label_result_time.config(text=f"óra: {orak:.4f}, perc: {percek:.4f}, másodperc: {masodpercek:.4f}")
 
 # Fő ablak
 root = tk.Tk()
