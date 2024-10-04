@@ -2,55 +2,46 @@ import tkinter as tk
 from tkinter import ttk
 
 # Hossz átváltás
-def convert_length():
+def hossz():
     ertek = float(entry_length.get())
     egyseg = combo_length.get()
     
     if egyseg == "kilométer":
-        miles = ertek * 0.621371
-        meters = ertek * 1000
-        millimeters = ertek * 1000000
+        merfoldek = ertek * 0,6215040397762585
+        meterek = ertek * 1000
+        millimeterek = ertek * 1000000
     elif egyseg == "mérföld":
-        kilometers = ertek * 1.60934
-        meters =  * 1609.34
-        millimeters = ertek * 1609340
+        kilometerek = ertek * 1.609
+        meterek = ertek * 1609
+        millimeterek = ertek * 1609
     elif egyseg == "méters":
-        kilometers = ertek / 1000
-        miles =  / 1609.34
-        millimeters = ertek * 1000
+        kilometerek = ertek / 1000
+        merfoldek = ertek / 1609
+        millimeterek = ertek * 1000
     elif egyseg == "milliméter":
-        kilometers = ertek / 1000000
-        miles = ertek / 1609340
-        meters = ertek / 1000
+        kilometerek = ertek / 1000000
+        merfoldek = ertek / 1609
+        meterek = ertek / 1000
     
-    label_result_length.config(text=f"kilométer: {kilometers:.4f}, mérföld: {miles:.4f}, méter: {meters:.4f}, milliméter: {millimeters:.4f}")
+    label_result_length.config(text=f"kilométer: {kilometerek:.4f}, mérföld: {merfoldek:.4f}, méter: {meterek:.4f}, milliméter: {millimeterek:.4f}")
 
 # Tömeg átváltás
-def convert_weight():
+def suly():
     ertek = float(entry_weight.get())
     egyseg = combo_weight.get()
     
     if egyseg == "kilogramm":
-        font = ertek * 2.20462
         gram = ertek * 1000
-        uncia = ertek * 35.274
     elif egyseg == "font":
         kg = ertek / 2.20462
         gram = kg * 1000
-        uncia = ertek * 16
     elif egyseg == "gramm":
         kg = ertek / 1000
-        font = kg * 2.20462
-        uncia = kg * 35.274
-    elif egyseg == "uncia":
-        kg = ertek / 35.274
-        font = ertek / 16
-        gram = kg * 1000
     
-    label_result_weight.config(text=f"kilogramm: {kg:.4f}, font: {font:.4f}, gramm: {gram:.4f}, uncia: {uncia:.4f}")
+    label_result_weight.config(text=f"kilogramm: {kg:.4f}, gramm: {gram:.4f}")
 
 # Idő átváltás
-def convert_time():
+def ido():
     ertek = float(entry_time.get())
     egyseg = combo_time.get()
     
@@ -169,4 +160,7 @@ def open_time_window():
     button_close_time = tk.Button(time_window, text="ablak bezárása", command=time_window.destroy)
     button_close_time.pack(pady=20)
 
+hossz()
+suly()
+ido()
 root.mainloop()
