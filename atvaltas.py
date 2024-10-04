@@ -6,7 +6,7 @@ def convert_length():
     value = float(entry_length.get())
     unit = combo_length.get()
     
-    if unit == "Kilométer":
+    if egyseg == "Kilométer":
         miles = value * 0.621371
         meters = value * 1000
         millimeters = value * 1000000
