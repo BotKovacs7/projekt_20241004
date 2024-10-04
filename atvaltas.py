@@ -70,17 +70,17 @@ cimkecim = tk.Label(root, text="mértékegység átváltó", font=("helvetica", 
 cimkecim.pack(pady=10)
 
 # Gombok a mértékegység-típusokhoz
-hosszgomb = tk.Button(root, text="hossz átváltás", command=lambda: open_hossz_ablak())
-hosszgomb.pack(pady=5)
+gombhossz = tk.Button(root, text="hossz átváltás", command=lambda: open_hossz_ablak())
+gombhossz.pack(pady=5)
 
-button_weight = tk.Button(root, text="tömeg átváltás", command=lambda: open_suly_ablak())
-button_weight.pack(pady=5)
+gombsuly = tk.Button(root, text="tömeg átváltás", command=lambda: open_suly_ablak())
+gombsuly.pack(pady=5)
 
-button_time = tk.Button(root, text="idő átváltás", command=lambda: open_ido_ablak())
-button_time.pack(pady=5)
+gombido = tk.Button(root, text="idő átváltás", command=lambda: open_ido_ablak())
+gombido.pack(pady=5)
 
-button_exit = tk.Button(root, text="kilépés", command=root.quit)
-button_exit.pack(pady=20)
+gombkilep = tk.Button(root, text="kilépés", command=root.quit)
+gombkilep.pack(pady=20)
 
 # Hossz ablak
 def open_hossz_ablak():
