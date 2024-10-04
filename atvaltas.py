@@ -49,10 +49,10 @@ def ido():
         percek = ertek * 60
         masodpercek = ertek * 3600
     elif egyseg == "perc":
-        hours = ertek / 60
+        orak = ertek / 60
         masodpercek = ertek * 60
     elif egyseg == "másodperc":
-        hours = ertek / 3600
+        orak = ertek / 3600
         percek = ertek / 60
     elif egyseg == "nap":
         orak = ertek * 24
