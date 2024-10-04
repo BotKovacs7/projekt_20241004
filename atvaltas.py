@@ -3,8 +3,8 @@ from tkinter import ttk
 
 # Hossz átváltás
 def hossz():
-    ertek = float(entry_length.get())
-    egyseg = combo_length.get()
+    ertek = float(entry_hossz.get())
+    egyseg = combo_hossz.get()
     
     if egyseg == "kilométer":
         merfoldek = ertek * 0,6215040397762585
@@ -23,12 +23,12 @@ def hossz():
         merfoldek = ertek / 1609
         meterek = ertek / 1000
     
-    label_result_length.config(text=f"kilométer: {kilometerek:.4f}, mérföld: {merfoldek:.4f}, méter: {meterek:.4f}, milliméter: {millimeterek:.4f}")
+    label_result_hossz.config(text=f"kilométer: {kilometerek:.4f}, mérföld: {merfoldek:.4f}, méter: {meterek:.4f}, milliméter: {millimeterek:.4f}")
 
 # Tömeg átváltás
 def suly():
-    ertek = float(entry_weight.get())
-    egyseg = combo_weight.get()
+    ertek = float(entry_suly.get())
+    egyseg = combo_suly.get()
     
     if egyseg == "kilogramm":
         gram = ertek * 1000
@@ -38,12 +38,12 @@ def suly():
     elif egyseg == "gramm":
         kg = ertek / 1000
     
-    label_result_weight.config(text=f"kilogramm: {kg:.4f}, gramm: {gram:.4f}")
+    label_result_suly.config(text=f"kilogramm: {kg:.4f}, gramm: {gram:.4f}")
 
 # Idő átváltás
 def ido():
-    ertek = float(entry_time.get())
-    egyseg = combo_time.get()
+    ertek = float(entry_ido.get())
+    egyseg = combo_ido.get()
     
     if egyseg == "óra":
         percek = ertek * 60
@@ -59,7 +59,7 @@ def ido():
         percek = ertek * 1440
         masodpercek = ertek * 86400
     
-    label_result_time.config(text=f"óra: {orak:.4f}, perc: {percek:.4f}, másodperc: {masodpercek:.4f}")
+    label_result_ido.config(text=f"óra: {orak:.4f}, perc: {percek:.4f}, másodperc: {masodpercek:.4f}")
 
 # Fő ablak
 root = tk.Tk()
