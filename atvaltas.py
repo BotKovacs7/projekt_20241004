@@ -14,7 +14,7 @@ def hossz():
         kilometerek = ertek * 1.609
         meterek = ertek * 1609
         millimeterek = ertek * 1609
-    elif egyseg == "méters":
+    elif egyseg == "méter":
         kilometerek = ertek / 1000
         merfoldek = ertek / 1609
         millimeterek = ertek * 1000
@@ -99,6 +99,10 @@ def open_hossz_ablak():
     combo_hossz.pack(pady=5)
     combo_hossz.current(0)  # Alapértelmezett kiválasztás
 
+    combo_hossz1 = ttk.Combobox(hosszablak, values=["kilométer", "mérföld", "méters", "milliméter"])
+    combo_hossz1.pack(pady=5)
+    combo_hossz1.current(1)
+
     hosszkonvertalas = tk.Button(hosszablak, text="számolás", command=hossz)
     hosszkonvertalas.pack(pady=5)
 
@@ -124,6 +128,10 @@ def open_suly_ablak():
     combo_suly = ttk.Combobox(open_suly_ablak, values=["kilogramm","gramm"])
     combo_suly.pack(pady=5)
     combo_suly.current(0)  # Alapértelmezett kiválasztás
+
+    combo_suly1 = ttk.Combobox(open_suly_ablak, values=["kilogramm","gramm"])
+    combo_suly1.pack(pady=5)
+    combo_suly1.current(1)
 
     sulykonvertalas = tk.Button(open_suly_ablak, text="számolás", command=suly)
     sulykonvertalas.pack(pady=5)
@@ -151,6 +159,10 @@ def open_ido_ablak():
     combo_ido.pack(pady=5)
     combo_ido.current(0)  # Alapértelmezett kiválasztás
 
+    combo_ido1 = ttk.Combobox(idoablak, values=["óra", "perc", "másodperc", "nap"])
+    combo_ido1.pack(pady=5)
+    combo_ido1.current(1)
+
     idokonvertalas = tk.Button(idoablak, text="számolás", command=ido)
     idokonvertalas.pack(pady=5)
 
@@ -159,9 +171,5 @@ def open_ido_ablak():
 
     gombzar = tk.Button(idoablak, text="ablak bezárása", command=idoablak.destroy)
     gombzar.pack(pady=20)
-
-open_hossz_ablak()
-open_suly_ablak()
-open_ido_ablak()
 
 root.mainloop()
