@@ -84,80 +84,80 @@ button_exit.pack(pady=20)
 
 # Hossz ablak
 def open_hossz_ablak():
-    length_window = tk.Toplevel(root)
-    length_window.title("hossz átváltás")
+    hosszablak = tk.Toplevel(root)
+    hosszablak.title("hossz átváltás")
     
     global entry_length, combo_length, label_result_length
     
-    label_length = tk.Label(length_window, text="ird be az értéket:")
-    label_length.pack(pady=5)
+    label_hossz = tk.Label(hosszablak, text="ird be az értéket:")
+    label_hossz.pack(pady=5)
     
-    entry_length = tk.Entry(length_window)
-    entry_length.pack(pady=5)
+    entry_hossz = tk.Entry(hosszablak)
+    entry_hossz.pack(pady=5)
     
-    combo_length = ttk.Combobox(length_window, values=["kilométer", "mérföld", "méters", "milliméter"])
-    combo_length.pack(pady=5)
-    combo_length.current(0)  # Alapértelmezett kiválasztás
+    combo_hossz = ttk.Combobox(hosszablak, values=["kilométer", "mérföld", "méters", "milliméter"])
+    combo_hossz.pack(pady=5)
+    combo_hossz.current(0)  # Alapértelmezett kiválasztás
 
-    button_convert_length = tk.Button(length_window, text="számolás", command=hossz)
-    button_convert_length.pack(pady=5)
+    hosszkonvertalas = tk.Button(hosszablak, text="számolás", command=hossz)
+    hosszkonvertalas.pack(pady=5)
 
-    label_result_length = tk.Label(length_window, text="")
-    label_result_length.pack(pady=5)
+    label_result_hossz = tk.Label(hosszablak, text="")
+    label_result_hossz.pack(pady=5)
 
-    button_close_length = tk.Button(length_window, text="ablak bezárása", command=length_window.destroy)
-    button_close_length.pack(pady=20)
+    gombzarhossz = tk.Button(hosszablak, text="ablak bezárása", command=hosszablak.destroy)
+    gombzarhossz.pack(pady=20)
 
 # Tömeg ablak
 def open_suly_ablak():
-    weight_window = tk.Toplevel(root)
-    weight_window.title("tömeg átváltás")
+    open_suly_ablak = tk.Toplevel(root)
+    open_suly_ablak.title("tömeg átváltás")
     
     global entry_weight, combo_weight, label_result_weight
     
-    label_weight = tk.Label(weight_window, text="írd be az értéket:")
-    label_weight.pack(pady=5)
+    label_suly = tk.Label(open_suly_ablak, text="írd be az értéket:")
+    label_suly.pack(pady=5)
     
-    entry_weight = tk.Entry(weight_window)
-    entry_weight.pack(pady=5)
+    entry_suly = tk.Entry(open_suly_ablak)
+    entry_suly.pack(pady=5)
     
-    combo_weight = ttk.Combobox(weight_window, values=["kilogramm","gramm"])
-    combo_weight.pack(pady=5)
-    combo_weight.current(0)  # Alapértelmezett kiválasztás
+    combo_suly = ttk.Combobox(open_suly_ablak, values=["kilogramm","gramm"])
+    combo_suly.pack(pady=5)
+    combo_suly.current(0)  # Alapértelmezett kiválasztás
 
-    button_convert_weight = tk.Button(weight_window, text="számolás", command=suly)
-    button_convert_weight.pack(pady=5)
+    sulykonvertalas = tk.Button(open_suly_ablak, text="számolás", command=suly)
+    sulykonvertalas.pack(pady=5)
 
-    label_result_weight = tk.Label(weight_window, text="")
-    label_result_weight.pack(pady=5)
+    label_result_suly = tk.Label(open_suly_ablak, text="")
+    label_result_suly.pack(pady=5)
 
-    button_close_weight = tk.Button(weight_window, text="ablak bezárása", command=weight_window.destroy)
-    button_close_weight.pack(pady=20)
+    gombzarsuly = tk.Button(open_suly_ablak, text="ablak bezárása", command=open_suly_ablak.destroy)
+    gombzarsuly.pack(pady=20)
 
 # Idő ablak
 def open_ido_ablak():
-    time_window = tk.Toplevel(root)
-    time_window.title("idő átváltás")
+    idoablak = tk.Toplevel(root)
+    idoablak.title("idő átváltás")
     
     global entry_time, combo_time, label_result_time
     
-    label_time = tk.Label(time_window, text="írd be az értéket:")
-    label_time.pack(pady=5)
+    label_ido = tk.Label(idoablak, text="írd be az értéket:")
+    label_ido.pack(pady=5)
     
-    entry_time = tk.Entry(time_window)
-    entry_time.pack(pady=5)
+    entry_ido = tk.Entry(idoablak)
+    entry_ido.pack(pady=5)
     
-    combo_time = ttk.Combobox(time_window, values=["óra", "perc", "másodperc", "nap"])
-    combo_time.pack(pady=5)
-    combo_time.current(0)  # Alapértelmezett kiválasztás
+    combo_ido = ttk.Combobox(idoablak, values=["óra", "perc", "másodperc", "nap"])
+    combo_ido.pack(pady=5)
+    combo_ido.current(0)  # Alapértelmezett kiválasztás
 
-    button_convert_time = tk.Button(time_window, text="számolás", command=ido)
-    button_convert_time.pack(pady=5)
+    idokonvertalas = tk.Button(idoablak, text="számolás", command=ido)
+    idokonvertalas.pack(pady=5)
 
-    label_result_time = tk.Label(time_window, text="")
-    label_result_time.pack(pady=5)
+    label_result_ido = tk.Label(idoablak, text="")
+    label_result_ido.pack(pady=5)
 
-    button_close_time = tk.Button(time_window, text="ablak bezárása", command=time_window.destroy)
-    button_close_time.pack(pady=20)
+    gombzar = tk.Button(idoablak, text="ablak bezárása", command=idoablak.destroy)
+    gombzar.pack(pady=20)
 
 root.mainloop()
