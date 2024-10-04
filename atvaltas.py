@@ -30,65 +30,65 @@ def convert_weight():
     value = float(entry_weight.get())
     unit = combo_weight.get()
     
-    if unit == "Kilogramm":
+    if unit == "kilogramm":
         pounds = value * 2.20462
         grams = value * 1000
         ounces = value * 35.274
-    elif unit == "Font":
+    elif unit == "font":
         kilograms = value / 2.20462
         grams = kilograms * 1000
         ounces = value * 16
-    elif unit == "Gramm":
+    elif unit == "gramm":
         kilograms = value / 1000
         pounds = kilograms * 2.20462
         ounces = kilograms * 35.274
-    elif unit == "Uncia":
+    elif unit == "uncia":
         kilograms = value / 35.274
         pounds = value / 16
         grams = kilograms * 1000
     
-    label_result_weight.config(text=f"Kilogramm: {kilograms:.4f}, Font: {pounds:.4f}, Gramm: {grams:.4f}, Uncia: {ounces:.4f}")
+    label_result_weight.config(text=f"kilogramm: {kilograms:.4f}, font: {pounds:.4f}, gramm: {grams:.4f}, uncia: {ounces:.4f}")
 
 # Idő átváltás
 def convert_time():
     value = float(entry_time.get())
     unit = combo_time.get()
     
-    if unit == "Óra":
+    if unit == "óra":
         minutes = value * 60
         seconds = value * 3600
-    elif unit == "Perc":
+    elif unit == "perc":
         hours = value / 60
         seconds = value * 60
-    elif unit == "Másodperc":
+    elif unit == "másodperc":
         hours = value / 3600
         minutes = value / 60
-    elif unit == "Nap":
+    elif unit == "nap":
         hours = value * 24
         minutes = value * 1440
         seconds = value * 86400
     
-    label_result_time.config(text=f"Óra: {hours:.4f}, Perc: {minutes:.4f}, Másodperc: {seconds:.4f}")
+    label_result_time.config(text=f"óra: {hours:.4f}, perc: {minutes:.4f}, másodperc: {seconds:.4f}")
 
 # Fő ablak
 root = tk.Tk()
-root.title("Mértékegység Átváltó")
+root.title("mértékegység átváltó")
 
 # Cím
-label_title = tk.Label(root, text="Mértékegység Átváltó", font=("Helvetica", 16))
+label_title = tk.Label(root, text="mértékegység átváltó", font=("helvetica", 16))
 label_title.pack(pady=10)
 
 # Gombok a mértékegység-típusokhoz
-button_length = tk.Button(root, text="Hossz Átváltás", command=lambda: open_length_window())
+button_length = tk.Button(root, text="hossz átváltás", command=lambda: open_length_window())
 button_length.pack(pady=5)
 
-button_weight = tk.Button(root, text="Tömeg Átváltás", command=lambda: open_weight_window())
+button_weight = tk.Button(root, text="tömeg átváltás", command=lambda: open_weight_window())
 button_weight.pack(pady=5)
 
-button_time = tk.Button(root, text="Idő Átváltás", command=lambda: open_time_window())
+button_time = tk.Button(root, text="idő átváltás", command=lambda: open_time_window())
 button_time.pack(pady=5)
 
-button_exit = tk.Button(root, text="Kilépés", command=root.quit)
+button_exit = tk.Button(root, text="kilépés", command=root.quit)
 button_exit.pack(pady=20)
 
 # Hossz ablak
