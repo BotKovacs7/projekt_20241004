@@ -66,12 +66,12 @@ root = tk.Tk()
 root.title("mértékegység átváltó")
 
 # Cím
-label_title = tk.Label(root, text="mértékegység átváltó", font=("helvetica", 16))
-label_title.pack(pady=10)
+cimkecim = tk.Label(root, text="mértékegység átváltó", font=("helvetica", 16))
+cimkecim.pack(pady=10)
 
 # Gombok a mértékegység-típusokhoz
-button_length = tk.Button(root, text="hossz átváltás", command=lambda: open_hossz_ablak())
-button_length.pack(pady=5)
+hosszgomb = tk.Button(root, text="hossz átváltás", command=lambda: open_hossz_ablak())
+hosszgomb.pack(pady=5)
 
 button_weight = tk.Button(root, text="tömeg átváltás", command=lambda: open_suly_ablak())
 button_weight.pack(pady=5)
