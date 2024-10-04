@@ -89,7 +89,7 @@ def open_hossz_ablak():
     
     global entry_length, combo_length, label_result_length
     
-    label_hossz = tk.Label(hosszablak, text="ird be az értéket:")
+    label_hossz = tk.Label(hosszablak, text="írd be az értéket:")
     label_hossz.pack(pady=5)
     
     entry_hossz = tk.Entry(hosszablak)
