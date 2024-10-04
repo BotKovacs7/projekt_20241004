@@ -87,7 +87,7 @@ def open_hossz_ablak():
     hosszablak = tk.Toplevel(root)
     hosszablak.title("hossz átváltás")
     
-    global entry_length, combo_length, label_result_length
+    global entry_hossz, combo_hossz, label_result_hossz
     
     hosszcimke = tk.Label(hosszablak, text="írd be az értéket:")
     hosszcimke.pack(pady=5)
@@ -113,7 +113,7 @@ def open_suly_ablak():
     open_suly_ablak = tk.Toplevel(root)
     open_suly_ablak.title("tömeg átváltás")
     
-    global entry_weight, combo_weight, label_result_weight
+    global entry_suly, combo_suly, label_result_suly
     
     sulycimke = tk.Label(open_suly_ablak, text="írd be az értéket:")
     sulycimke.pack(pady=5)
@@ -139,7 +139,7 @@ def open_ido_ablak():
     idoablak = tk.Toplevel(root)
     idoablak.title("idő átváltás")
     
-    global entry_time, combo_time, label_result_time
+    global entry_ido, combo_ido, label_result_ido
     
     idocimke = tk.Label(idoablak, text="írd be az értéket:")
     idocimke.pack(pady=5)
