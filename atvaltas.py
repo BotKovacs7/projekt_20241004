@@ -70,20 +70,20 @@ label_title = tk.Label(root, text="mértékegység átváltó", font=("helvetica
 label_title.pack(pady=10)
 
 # Gombok a mértékegység-típusokhoz
-button_length = tk.Button(root, text="hossz átváltás", command=lambda: open_length_window())
+button_length = tk.Button(root, text="hossz átváltás", command=lambda: open_hossz_ablak())
 button_length.pack(pady=5)
 
-button_weight = tk.Button(root, text="tömeg átváltás", command=lambda: open_weight_window())
+button_weight = tk.Button(root, text="tömeg átváltás", command=lambda: open_suly_ablak())
 button_weight.pack(pady=5)
 
-button_time = tk.Button(root, text="idő átváltás", command=lambda: open_time_window())
+button_time = tk.Button(root, text="idő átváltás", command=lambda: open_ido_ablak())
 button_time.pack(pady=5)
 
 button_exit = tk.Button(root, text="kilépés", command=root.quit)
 button_exit.pack(pady=20)
 
 # Hossz ablak
-def open_length_window():
+def open_hossz_ablak():
     length_window = tk.Toplevel(root)
     length_window.title("hossz átváltás")
     
@@ -99,7 +99,7 @@ def open_length_window():
     combo_length.pack(pady=5)
     combo_length.current(0)  # Alapértelmezett kiválasztás
 
-    button_convert_length = tk.Button(length_window, text="számolás", command=convert_length)
+    button_convert_length = tk.Button(length_window, text="számolás", command=hossz)
     button_convert_length.pack(pady=5)
 
     label_result_length = tk.Label(length_window, text="")
@@ -109,7 +109,7 @@ def open_length_window():
     button_close_length.pack(pady=20)
 
 # Tömeg ablak
-def open_weight_window():
+def open_suly_ablak():
     weight_window = tk.Toplevel(root)
     weight_window.title("tömeg átváltás")
     
@@ -121,11 +121,11 @@ def open_weight_window():
     entry_weight = tk.Entry(weight_window)
     entry_weight.pack(pady=5)
     
-    combo_weight = ttk.Combobox(weight_window, values=["kilogramm", "font", "gramm", "uncia"])
+    combo_weight = ttk.Combobox(weight_window, values=["kilogramm","gramm"])
     combo_weight.pack(pady=5)
     combo_weight.current(0)  # Alapértelmezett kiválasztás
 
-    button_convert_weight = tk.Button(weight_window, text="számolás", command=convert_weight)
+    button_convert_weight = tk.Button(weight_window, text="számolás", command=suly)
     button_convert_weight.pack(pady=5)
 
     label_result_weight = tk.Label(weight_window, text="")
@@ -135,7 +135,7 @@ def open_weight_window():
     button_close_weight.pack(pady=20)
 
 # Idő ablak
-def open_time_window():
+def open_ido_ablak():
     time_window = tk.Toplevel(root)
     time_window.title("idő átváltás")
     
@@ -151,7 +151,7 @@ def open_time_window():
     combo_time.pack(pady=5)
     combo_time.current(0)  # Alapértelmezett kiválasztás
 
-    button_convert_time = tk.Button(time_window, text="számolás", command=convert_time)
+    button_convert_time = tk.Button(time_window, text="számolás", command=ido)
     button_convert_time.pack(pady=5)
 
     label_result_time = tk.Label(time_window, text="")
@@ -160,7 +160,4 @@ def open_time_window():
     button_close_time = tk.Button(time_window, text="ablak bezárása", command=time_window.destroy)
     button_close_time.pack(pady=20)
 
-hossz()
-suly()
-ido()
 root.mainloop()
